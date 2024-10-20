@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.profile-content {
+    padding: 20px;
+}
+
+.name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4f46e5;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section[data-direction="left"] {
+    transform: translateX(-50px);
+}
+
+.section.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+}
+
+.skill-name {
+    width: 100px;
+}
+
+.stars {
+    display: flex;
+    margin: 0 10px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(80%) sepia(12%) saturate(819%) hue-rotate(357deg) brightness(101%) contrast(101%);
+}
+
+.star.full {
+    filter: invert(77%) sepia(41%) saturate(1099%) hue-rotate(359deg) brightness(101%) contrast(106%);
+}
+
+.star.half {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L15.09 8.26 L22 9.27 L17 14.14 L18.18 21.02 L12 17.77 L5.82 21.02 L7 14.14 L2 9.27 L8.91 8.26 Z" /><path d="M12 2 L12 17.77" fill="currentColor" /></svg>');
+    filter: invert(77%) sepia(41%) saturate(1099%) hue-rotate(359deg) brightness(101%) contrast(106%);
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        width: 100%;
+    }
+}
